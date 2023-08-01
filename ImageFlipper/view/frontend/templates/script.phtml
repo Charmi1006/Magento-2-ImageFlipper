@@ -1,0 +1,17 @@
+<?php
+$config=$block->getConfig();
+if ($config['enable']){
+?>
+<script>
+ requirejs(['jquery','magentoCodersFlipper'],
+        function($) {
+			var widget = $(this).magentoCodersFlipper({
+			"mainclass":"<?php echo $config['product_container'];?>",
+			"imageclass":"<?php echo $config['product_image'];?>",
+			"imageflip":"<?php echo $config['flip_image'];?>"
+			});
+        });
+</script>
+<?php } ?>
+
+
